@@ -1,0 +1,66 @@
+<!-- accounts.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuentas</title>
+  <style>
+    body {
+      background-color: #E4B7FF;
+      margin: 0;
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: #000;
+      height: 40px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .navbar-item {
+      color: #fff;
+      text-align: center;
+      flex: 1;
+    }
+
+    h1 {
+      color: #000;
+    }
+
+    main {
+      margin-top: 60px;
+      padding: 20px;
+    }
+
+    .account-item {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="/" class="navbar-item">Inicio</a>
+    <a href="/about" class="navbar-item">Acerca de</a>
+    <a href="/accounts" class="navbar-item">Cuentas</a>
+    <a href="#decks-ygo" class="navbar-item">Decks de YGO</a>
+    <a href="#pokemons" class="navbar-item">Pokemons</a>
+  </div>
+
+  <main>
+    <h1>Mis Cuentas</h1>
+
+    <% accountsData.forEach(account => { %>
+      <div class="account-item">
+        <h2><%= account.platform %></h2>
+        <p><a href="<%= account.link %>" target="_blank"><%= account.username %></a></p>
+      </div>
+    <% }); %>
+  </main>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil Personal</title>
+  <style>
+    body {
+      background-color: #E4B7FF;
+      margin: 0;
+    }
+
+    .navbar {
+      background-color: #000;
+      height: 40px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .navbar-item {
+      color: #fff;
+      text-align: center;
+      flex: 1;
+    }
+
+    main {
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="/" class="navbar-item">Inicio</a>
+    <a href="/about" class="navbar-item">Acerca de</a>
+    <a href="/accounts" class="navbar-item">Cuentas</a>
+    <a href="#decks-ygo" class="navbar-item">Decks de YGO</a>
+    <a href="#pokemons" class="navbar-item">Pokemons</a>
+  </div>
+
+  <main>
+    <h1 id="acerca-de">Perfil Personal</h1>
+    <p><%= data.perfil %></p>
+
+    <h2 id="cuentas">Formación Académica</h2>
+    <p><%= data.formacion %></p>
+
+    <h2 id="decks-ygo">Experiencia en el Campo</h2>
+    <p><%= data.experiencia %></p>
+
+    <h2 id="pokemons">Actualizaciones</h2>
+    <p><%= data.actualizaciones %></p>
+  </main>
+</body>
+</html>
